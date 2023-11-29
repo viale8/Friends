@@ -1,3 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+    :root {
+      --purple-dark: #625284;
+      --red: #DD232F;
+      --yellow: #F4AF1A;
+      --blue: #49ABE1;
+      --grey: #BBBBBB;
+    }
+  }
+
+@font-face {
+    font-family: "gabriel_weiss_friends";
+    src: url("./assets/GABRWFFR.TTF");
+}
