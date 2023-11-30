@@ -15,16 +15,24 @@ const CastComponent = () => {
   return (
     <div className="">
       {castData.data && !castData.isLoading && !castData.isError && (
-        <div className="grid grid-cols-3 gap-4 xl:grid-cols-6 px-20 pt-5 pb-5">
+        <div className="flex justify-center items-center">
+          <div className="grid grid-cols-3 gap-10 xl:grid-cols-6 px-2 pt-5 pb-5">
           {castData.data.map((actor) => (
-            <div className="flex justify-center items-center">
-              <div key={actor.character.id} className="flex flex-col justify-center items-center pb-7 w-40">
-                <img src={actor.character.image.medium} alt={actor.person.name} className="pb-1 w-44"/>
-                <p className="text-purple-dark font-bold" >{actor.person.name}</p>
-                <p className="text-purple-dark text-sm font-medium" >as {actor.character.name}</p>
+            <div key={actor.character.id} className="flex flex-col justify-center items-center pb-7 w-40 relative">
+              <div className="relative group">
+                <img
+                  src={actor.character.image.medium}
+                  alt={actor.person.name}
+                  className="w-44 transition-all duration-150 group-hover:brightness-50"
+                />
+                <div className="hidden group-hover:flex absolute top-0 left-0 w-full h-full bg-black bg-opacity-50 items-center justify-center">
+                  <p className="text-white text-lg font-bold">{actor.character.name}</p>
+                </div>
               </div>
+              <p className="text-purple-dark font-bold pt-2">{actor.person.name}</p>
             </div>
-          ))}
+            ))}
+          </div>
         </div>
       )}
     </div>

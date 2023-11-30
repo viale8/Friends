@@ -73,9 +73,14 @@ const MyComponent = () => {
                     Episode {episode.number} - {episode.name}
                   </button>
                   {selectedEpisode && selectedEpisode.id === episode.id && (
+                    <>
                     <div className="pl-8 pt-2 pb-5 text-sm text-white font-regular">
                       <div dangerouslySetInnerHTML={{ __html: selectedEpisode.summary }} />
                     </div>
+                      <img
+                      src={episode.image.medium}
+                      />
+                    </>
                   )}
                 </li>
               ))}
