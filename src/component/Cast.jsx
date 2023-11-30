@@ -16,7 +16,7 @@ const CastComponent = () => {
     <div className="">
       {castData.data && !castData.isLoading && !castData.isError && (
         <div className="flex justify-center items-center">
-          <div className="grid grid-cols-2 gap-10 xl:grid-cols-6 px-2 pt-5 pb-5 sm:grid-cols-5">
+          <div className="grid grid-cols-2 gap-10 xl:grid-cols-6 px-2 pt-5 pb-5 sm:grid-cols-3">
           {castData.data.map((actor) => (
             <div key={actor.character.id} className="flex flex-col justify-center items-center pb-7 w-40 relative">
               <div className="relative group">

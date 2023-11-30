@@ -65,13 +65,13 @@ const MyComponent = () => {
         <div className="flex flex-col justify-start ml-12">
           <h2 className="pt-2 pb-5 text-white text-3xl items-start font-gabriel_weiss_friends">Season {selectedSeason.number} <span className="text-base font-sans sm:text-lg">({selectedSeason.premiereDate} to {selectedSeason.endDate})</span></h2>
           {episodesData.data && !episodesData.isLoading && !episodesData.isError ? (
-            <ul className="flex gap-5 justify-start">
+            <ul className="grid gap-5 grid-cols-2">
               <div>
               {episodesData.data.map((episode) => (
                 <div>
                    {selectedEpisode && selectedEpisode.id === episode.id && (
                     <>
-                   <img src={episode.image.original} className="w-" />
+                   <img src={episode.image.original} className="w-image pt-1" />
                    {selectedEpisode && selectedEpisode.id === episode.id && (
                     <div className="pt-2 text-sm text-white font-regular">
                       <div dangerouslySetInnerHTML={{ __html: selectedEpisode.summary }} />

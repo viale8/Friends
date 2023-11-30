@@ -18,6 +18,9 @@ export default {
       sans: ['Montserrat', 'sans-serif'],
       "gabriel_weiss_friends": ['gabriel_weiss_friends'],
     },
+    width: {
+      "image": "40rem",
+    }
     },
   },
   plugins: [],
