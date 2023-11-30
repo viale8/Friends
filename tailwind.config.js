@@ -12,6 +12,7 @@ export default {
         "yellow": "var(--yellow)",
         "blue": "var(--blue)",
         "grey": "var(--grey)",
+        "purple-light": "var(--purple-light)",
      },
      fontFamily: {
       sans: ['Montserrat', 'sans-serif'],

@@ -48,12 +48,12 @@ const MyComponent = () => {
   return (
     <div className="flex flex-col">
       {seasonsData.data && !seasonsData.isLoading && !seasonsData.isError && (
-        <div className="grid gap-5 grid-cols-5 grid-rows-2 p-5 justify-center items-center">
+        <div className="grid gap-5 grid-cols-5 grid-rows-2 px-12 pt-5 pb-5 justify-center items-center">
           {seasonsData.data.map((season) => (
             <div key={season.id} onClick={() => handleSeasonClick(season)}className="flex flex-col items-center gap-2 cursor-pointer">
               <img src={season.image.medium} alt={`Saison ${season.number}`} 
-               className="bg-black aspect-square object-contain hover:scale-105 duration-150"/>
-              <p className="text-white font-bolduppercase text-base pb-4">
+               className="bg-black aspect-square object-contain hover:scale-105 duration-150 w-60"/>
+              <p className="text-white font-bold uppercase text-sm pb-4">
                 Season {season.number}
               </p>
             </div>
@@ -63,7 +63,7 @@ const MyComponent = () => {
 
       {selectedSeason && (
         <div className="flex flex-col justify-start">
-          <h2 className="pt-2 pb-5 text-white text-3xl items-start font-gabriel_weiss_friends">Season {selectedSeason.number} :</h2>
+          <h2 className="pt-2 pb-5 text-white text-3xl items-start font-gabriel_weiss_friends ">Season {selectedSeason.number} :</h2>
           {episodesData.data && !episodesData.isLoading && !episodesData.isError ? (
             <ul>
               {episodesData.data.map((episode) => (
