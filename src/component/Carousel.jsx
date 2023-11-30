@@ -14,11 +14,11 @@ const Carousel = ({ images }) => {
   }, [images.length]);
 
   return (
-    <div className="overflow-hidden max-h-full	">
+    <div className="overflow-hidden">
       <img
         src={images[currentImage]}
         alt={`Slide ${currentImage + 1}`}
-        className="w-full h-auto max-h-full object-bottom object-fill"
+        className="w-full h-auto max-h-full object-bottom object-fill xl-h-full xl-object-cover"
       />
     </div>
   );

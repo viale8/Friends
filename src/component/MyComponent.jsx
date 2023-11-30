@@ -62,18 +62,18 @@ const MyComponent = () => {
       )}
 
       {selectedSeason && (
-        <div className="flex flex-col justify-start">
-          <h2 className="pt-2 pb-5 text-white text-3xl items-start font-gabriel_weiss_friends ">Season {selectedSeason.number} :</h2>
+        <div className="flex flex-col justify-start ml-12">
+          <h2 className="pt-2 pb-5 text-white text-3xl items-start font-gabriel_weiss_friends ">Season {selectedSeason.number} <span className="text-lg font-sans">({selectedSeason.premiereDate} to {selectedSeason.endDate})</span></h2>
           {episodesData.data && !episodesData.isLoading && !episodesData.isError ? (
             <ul>
               {episodesData.data.map((episode) => (
                 <li key={episode.id} className="pb-2 text-grey font-medium">
                   <button onClick={() => handleEpisodeClick(episode)}
-                  className={`text-medium ${selectedEpisode && selectedEpisode.id === episode.id ? 'text-white font-bold' : 'text-grey'}`}>
+                  className={`hover:text-white duration-150 text-medium ${selectedEpisode && selectedEpisode.id === episode.id ? 'text-white font-bold' : 'text-grey'}`}>
                     Episode {episode.number} - {episode.name}
                   </button>
                   {selectedEpisode && selectedEpisode.id === episode.id && (
-                    <div className="pl-8 pt-2 pb-5 text-sm	text-white font-regular">
+                    <div className="pl-8 pt-2 pb-5 text-sm text-white font-regular">
                       <div dangerouslySetInnerHTML={{ __html: selectedEpisode.summary }} />
                     </div>
                   )}
