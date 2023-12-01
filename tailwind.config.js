@@ -20,6 +20,9 @@ export default {
     },
     width: {
       "image": "40rem",
+    },
+    maxWidth: {
+      "image": "40rem",
     }
     },
   },

@@ -23,7 +23,7 @@ const CastComponent = () => {
                 <img
                   src={actor.character.image.medium}
                   alt={actor.person.name}
-                  className="w-44 transition-all duration-150 group-hover:brightness-50"
+                  className="w-44 transition-all duration-200 group-hover:brightness-100"
                 />
                 <div className="hidden group-hover:flex absolute top-0 left-0 w-full h-full bg-black bg-opacity-50 items-center justify-center">
                   <p className="text-white text-lg font-bold">{actor.character.name}</p>
